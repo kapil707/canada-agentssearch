@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BusinessApplicationController;
 use App\Http\Controllers\Admin\EmployerController;
 use App\Http\Controllers\Admin\JobSeekerController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\PageHeadController;
 use App\Http\Controllers\Admin\QuickRegistrationController;
 use App\Http\Controllers\Admin\SkilledWorkerApplicationController;
 use App\Http\Controllers\Admin\TestimonialController;
@@ -29,6 +30,7 @@ Route::middleware(['auth:web','role:admin|super_admin'])->name('admin.')->group(
     Route::post('users/{id}/change-password',[UserController::class,'changePassword'])->name('users.change-password');
     Route::resource('users', UserController::class);
     Route::resource('pages',PageController::class);
+    Route::resource('pageheads',PageHeadController::class);
     Route::post('business-applications/{id}/upload-contract',[BusinessApplicationController::class,'uploadSignedContract'])
         ->name('business-applications.upload-contract');
     Route::get('business-applications/{id}/download', function ($id) {
