@@ -32,7 +32,7 @@
                     </x-blocks.alert>
                 @endif
                 <div class="flex justify-center pt-8 sm:pt-0">
-                    <img src="{{asset('img/logo.png')}}" width="200"/>
+                    <img src="{{asset('public/img/logo.png')}}" width="200"/>
                 </div>
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1">
