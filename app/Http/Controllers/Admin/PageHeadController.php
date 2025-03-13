@@ -17,7 +17,7 @@ class PageHeadController extends Controller
      */
     public function index()
     {
-        $data = Page::select('id','title','url_key')->paginate(20);
+        $data = PageHead::select('id','title','url_key')->paginate(20);
         $columns = [
             ['label' => 'ID', 'field' => 'id', 'align' => 'left', 'sortable' => true],
             ['label' => 'Page Title', 'field' => 'title', 'align' => 'left', 'sortable' => true],
@@ -60,7 +60,7 @@ class PageHeadController extends Controller
             'title' => 'required|unique:pageheads',
             'url_key' => 'nullable|unique:pageheads'
         ]);
-        $page = new Page();
+        $page = new PageHead();
         $page->title = $request->input('title');
         $page->url_key = $request->input('url_key') ?? Str::slug($request->input('title'));
         $page->content = $request->input('content');
@@ -78,7 +78,7 @@ class PageHeadController extends Controller
      *
      * @param Page $page
      */
-    public function show(Page $page)
+    public function show(PageHead $page)
     {
         //
     }
@@ -86,9 +86,9 @@ class PageHeadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Page $page
+     * @param PageHead $page
      */
-    public function edit(Page $page)
+    public function edit(PageHead $page)
     {
         return view('admin.pageheads.edit',[
             'title' => 'Edit Page: '.$page->title,
@@ -107,7 +107,7 @@ class PageHeadController extends Controller
      * @param Page $page
      * @return RedirectResponse
      */
-    public function update(Request $request, Page $page): RedirectResponse
+    public function update(Request $request, PageHead $page): RedirectResponse
     {
         $request->validate([
             'title' => 'required|unique:pageheads,title,'.$page->id,
@@ -131,7 +131,7 @@ class PageHeadController extends Controller
      * @param Page $page
      * @return RedirectResponse
      */
-    public function destroy(Page $page): RedirectResponse
+    public function destroy(PageHead $page): RedirectResponse
     {
         $page->delete();
         return Response::redirectToRoute('admin.pageheads.index')->with('info','Page Deleted Successfully');
