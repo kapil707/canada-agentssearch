@@ -15,9 +15,9 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
         @livewireStyles
-        <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+        <script src="{{ asset('public/js/tinymce/tinymce.min.js') }}"></script>
     </head>
     <body class="antialiased h-full">
         <div class="wrapper h-auto min-h-full w-full relative" x-data="{showSidebar: false}">
@@ -57,7 +57,7 @@
         </div>
         @livewireScripts
         <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js" defer></script>
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('public/js/app.js') }}" defer></script>
     </body>
 
 </html>
