@@ -15,9 +15,9 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
         @livewireStyles
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('public/js/app.js') }}"></script>
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
