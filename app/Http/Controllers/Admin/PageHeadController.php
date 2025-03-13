@@ -26,7 +26,7 @@ class PageHeadController extends Controller
         return view('admin.pageheads.index',[
             'title' => 'Pageheads',
             'breadcrumbs' => [
-                ['label' => 'Pageheads', 'route_name' => 'admin.pageheads.index']
+                ['label' => 'Page', 'route_name' => 'admin.pageheads.index']
             ],
             'data' => $data,
             'columns' => $columns
