@@ -7,7 +7,7 @@
     after-title-button-label="Save"
 >
     <x-blocks.card>
-        <form method="POST" id="form" action="{{ route('admin.pages.store') }}">
+        <form method="POST" id="form" action="{{ route('admin.pageheads.store') }}">
             @csrf
             <div class="grid grid-cols-1 gap-4">
                 @if($errors->any())

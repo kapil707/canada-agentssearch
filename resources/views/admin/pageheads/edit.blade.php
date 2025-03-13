@@ -7,7 +7,7 @@
     after-title-button-label="Save"
 >
     <x-blocks.card>
-        <form method="POST" id="form" action="{{ route('admin.pages.update', $page->id) }}">
+        <form method="POST" id="form" action="{{ route('admin.pageheads.update', $page->id) }}">
             @csrf
             @method('PUT')
             <div class="grid grid-cols-1 gap-4">
