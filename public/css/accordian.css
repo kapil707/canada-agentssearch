@@ -1,0 +1,29 @@
+/* CSS Document */
+
+
+
+.menu_list {	
+	/*width: 150px;*/
+}
+
+.menu_head {
+	padding: 10px 20px 10px 40px;
+	cursor: pointer;
+	position: relative;
+	margin:0px;   	
+	color:#000;
+    background:#f3f3f3;
+	border-bottom:solid 1px #c4171e; border-left:solid 4px #c4171e; 
+	transition:all 1000ms ease-out 0s ; font-size:16px;
+}
+.menu_head:hover{background:#c4171e ; color:#fff; padding: 10px 90px 10px 20px;}
+
+.menu_body {
+	display:none; background:#eee;
+	padding:20px;
+}
+
+
+
+.table-hd{background:#f1dcd0; font-size:18px;}
+
