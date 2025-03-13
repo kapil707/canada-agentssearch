@@ -26,7 +26,7 @@ class PageHeadController extends Controller
         return view('admin.pageheads.index',[
             'title' => 'Pageheads',
             'breadcrumbs' => [
-                ['label' => 'Page', 'route_name' => 'admin.pageheads.index']
+                ['label' => 'Pageheads', 'route_name' => 'admin.pageheads.index']
             ],
             'data' => $data,
             'columns' => $columns
@@ -60,7 +60,7 @@ class PageHeadController extends Controller
             'title' => 'required|unique:pageheads',
             'url_key' => 'nullable|unique:pageheads'
         ]);
-        /*$page = new PageHead();
+        $page = new PageHead();
         $page->title = $request->input('title');
         $page->url_key = $request->input('url_key') ?? Str::slug($request->input('title'));
         $page->content = $request->input('content');
@@ -68,7 +68,7 @@ class PageHeadController extends Controller
         $page->show_in_main_menu = $request->has('show_in_main_menu');
         $page->meta_title = $request->input('meta_title',$request->input('title'));
         $page->fill($request->only(['meta_keywords','meta_description']));
-        $page->save();*/
+        $page->save();
 
         return Response::redirectToRoute('admin.pageheads.index')->with('success','Page Created Successfully');
     }
